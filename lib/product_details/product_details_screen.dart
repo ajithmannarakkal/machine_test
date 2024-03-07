@@ -63,7 +63,7 @@ class ProductDetailsScreen extends StatelessWidget {
                   const  SizedBox(
                     height: 15,
                   ),
-                  Text('₹ ${logic.productDetailsModel?.description}',
+                  Text('${logic.productDetailsModel?.description}',
                       style:
                           TextStyle(fontWeight: FontWeight.w400, fontSize: 12)),
                   const SizedBox(

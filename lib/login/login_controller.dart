@@ -34,8 +34,7 @@ class LoginController extends GetxController {
       Get.toNamed(AppRoutes.productScreen);
       return LoginModel.fromJson(jsonDecode(response.body));
     } else {
-      Get.toNamed(AppRoutes.productScreen);
-      // Get.snackbar('Alert', 'Login Failed',snackPosition: SnackPosition.BOTTOM);
+      Get.snackbar('Alert', 'Login Failed',snackPosition: SnackPosition.BOTTOM);
       throw Exception('error');
     }
   }
