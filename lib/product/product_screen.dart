@@ -36,7 +36,7 @@ class ProductScreen extends StatelessWidget {
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       crossAxisSpacing: 5,
-                      mainAxisExtent: 300,
+                      mainAxisExtent: 230,
                       mainAxisSpacing: 25,
                       childAspectRatio: 45 / 35),
                   itemBuilder: (BuildContext context, index) {
@@ -53,7 +53,7 @@ class ProductScreen extends StatelessWidget {
                             children: [
                               Image.network(product?.image ?? '',
                               fit: BoxFit.fitWidth,
-                                height: 220,
+                                height: 150,
                               ),
                               SizedBox(height: 5,),
                               Text(product?.title ?? '',
@@ -63,7 +63,9 @@ class ProductScreen extends StatelessWidget {
                               SizedBox(height: 2,),
                               Align(
                                   alignment: Alignment.bottomRight,
-                                  child: Text('₹ ${product?.price}')),
+                                  child: Text('₹ ${product?.price}',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                  )),
                             ],
                           ),
                         ),
